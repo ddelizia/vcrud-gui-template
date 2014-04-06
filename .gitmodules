@@ -1,0 +1,3 @@
+[submodule "submodules/AdminLTE"]
+	path = submodules/AdminLTE
+	url = https://ddelizia@github.com/ddelizia/AdminLTE.git
