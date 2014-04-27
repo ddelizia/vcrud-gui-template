@@ -2,19 +2,30 @@
   "name": "vcrud-gui-template",
   "version": "0.0.0",
   "dependencies": {
-    "angular": "1.2.6",
+    "angular": "1.2.16",
     "json3": "~3.2.6",
     "es5-shim": "~2.1.0",
     "jquery": "~1.10.2",
-    "bootstrap": "~3.0.3",
-    "angular-resource": "1.2.6",
-    "angular-cookies": "1.2.6",
-    "angular-sanitize": "1.2.6",
-    "angular-route": "1.2.6",
-    "less": "1.7.0"
+    "bootstrap": "~3.1.1",
+    "angular-resource": "1.2.16",
+    "angular-cookies": "1.2.16",
+    "angular-sanitize": "1.2.16",
+    "angular-route": "1.2.16",
+    "angular-animate" : "1.2.16",
+    "angular-motion" : "",
+    "angular-growl" : "",
+    "less": "1.7.0",
+    "angular-facebook" : "0.2.2",
+    "components-font-awesome" : "4.0.3",
+    "bootstrap-social" : "",
+    "angular-strap" : "~2.0.0",
+    "ng-grid" : "~2.0.9",
+    "angular-translate" : "~2.1.0",
+    "angular-translate-loader-static-files" : "~2.1.0",
+    "famfamfam-flags-sprite": "1.0.0"
   },
   "devDependencies": {
-    "angular-mocks": "1.2.6",
-    "angular-scenario": "1.2.6"
+    "angular-mocks": "1.2.16",
+    "angular-scenario": "1.2.16"
   }
 }

@@ -1,0 +1,23 @@
+{
+  "sign":{
+    "windowTitle" : "Log In",
+    "placeHolderEmail" : "InsertEmail",
+    "placeHolderPassword" : "Insert Password",
+    "buttonSignIn" : "Sign in",
+    "buttonSignInFB" : "Sign In with Facebook",
+    "buttonSignInGO" : "Sign In with Google+",
+    "buttonRegister" : "Register",
+    "linkForgotPassword" : "Forgot Password",
+    "inputEmail" : "Email",
+    "inputPassword" : "Password"
+
+  },
+
+  "FOO": "This is a paragraph",
+
+  "lang":{
+    "it" : "Italian",
+    "es" : "Spanish",
+    "en" : "English"
+  }
+}
