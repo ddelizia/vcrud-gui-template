@@ -1,3 +1,6 @@
 'use strict';
 
-angular.module('vcrudBasicComponents', ['vcrudTopNavBar']);
+angular.module('vcrudBasicComponents', [
+  'vcrudTopNavBar',
+  'vcrudValidatedInput'
+]);

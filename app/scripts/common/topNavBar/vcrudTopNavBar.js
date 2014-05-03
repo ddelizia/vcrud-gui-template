@@ -1,10 +1,8 @@
 'use strict';
 
-angular.module('vcrudTopNavBar', ['mgcrea.ngStrap'])
+angular.module('vcrudTopNavBar', ['mgcrea.ngStrap', 'vcrudTopNavBarDirective'])
   .controller('topNavbarController', ['$scope', '$translate', function ($scope, $translate) {
-
     $translate(['lang.es', 'lang.en', 'lang.it']).then(function (translations) {
-
       $scope.topNavBarLang = {
         selected: 'it',
         elements: [
@@ -14,13 +12,4 @@ angular.module('vcrudTopNavBar', ['mgcrea.ngStrap'])
         ]
       };
     });
-
-
-  }])
-  .directive('topNavbar', function() {
-    return {
-      restrict: 'E',
-      replace: true,
-      templateUrl: 'views/component/common/topNav.tpl.html'
-    };
-  });
+  }]);

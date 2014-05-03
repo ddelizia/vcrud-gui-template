@@ -30,8 +30,7 @@ module.exports = function (grunt) {
         options: {
           compress: true,
           yuicompress: true,
-          optimization: 2,
-          sourceMap: true
+          optimization: 2
         },
         files: {
           // target.css file: source.less file

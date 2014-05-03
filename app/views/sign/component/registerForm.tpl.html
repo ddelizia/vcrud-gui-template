@@ -1,0 +1,69 @@
+<form novalidate role="form" ng-controller="loginFormCtrl">
+	<div class="form-group col-md-6">
+		<label for="firstname">{{ 'sign.inputFirstname' | translate }} </label>
+		<input
+				type="email"
+				id="firstname"
+				class="form-control"
+				placeholder="{{ 'sign.placeHolderFirstname' | translate }}"
+				ng-model="register.firstname">
+	</div>
+	<div class="form-group col-md-6">
+		<label for="lastname">{{ 'sign.inputLastname' | translate }} </label>
+		<input
+				type="email"
+				id="lastname"
+				class="form-control"
+				placeholder="{{ 'sign.placeHolderLastname' | translate }}"
+				ng-model="register.lastname">
+	</div>
+	<div class="form-group col-md-12">
+		<label for="email">{{ 'sign.inputEmail' | translate }} </label>
+		<input
+				type="email"
+				id="email"
+				class="form-control"
+				placeholder="{{ 'sign.placeHolderEmail' | translate }}"
+				ng-model="register.email">
+	</div>
+	<div class="form-group col-md-12">
+		<label for="password">{{ 'sign.inputPassword' | translate }} </label>
+		<input
+				type="password"
+				id="password"
+				class="form-control"
+				placeholder="{{ 'sign.placeHolderPassword' | translate }}"
+				ng-minlength="8"
+				ng-model="register.password">
+	</div>
+	<div class="form-group col-md-12">
+		<label for="password2">{{ 'sign.inputConfirmPassword' | translate }} </label>
+		<input
+				type="password"
+				id="password2"
+				class="form-control"
+				placeholder="{{ 'sign.placeHolderConfirmPassword' | translate }}"
+				ng-minlength="8"
+				ng-model="register.password2">
+	</div>
+	<div class="register-button-group">
+		<div class="col-md-12">
+			<button type="submit" class="btn btn-block btn-default">{{ 'sign.buttonRegister' | translate }}</button>
+		</div>
+		<div class="col-md-6 register-button-group-social">
+			<button class="btn btn-block btn-social btn-facebook">
+				<i class="fa fa-facebook"></i> {{ 'sign.buttonRegisterFB' | translate }}
+			</button>
+		</div>
+		<div class="col-md-6">
+			<button class="btn btn-block btn-social btn-google-plus">
+				<i class="fa fa-google-plus"></i> {{ 'sign.buttonRegisterGO' | translate }}
+			</button>
+		</div>
+	</div>
+	<div class="col-md-12">
+		<div class="pull-right">
+			<a href="#/login" class="btn btn-link">{{ 'sign.buttonAlreadyregistered' | translate }}</a>
+		</div>
+	</div>
+</form>

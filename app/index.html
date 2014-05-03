@@ -71,13 +71,26 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-		<script src="scripts/util/translator.js"></script>
-		<script src="scripts/sign/vcrudSign.js"></script>
-		<script src="scripts/sign/components/vcrudSignLoginForm.js"></script>
-		<script src="scripts/common/vcrudBasicComponents.js"></script>
-		<script src="scripts/common/vcrudTopNavBar.js"></script>
-        <!-- endbuild -->
+	<!-- build:js({.tmp,app}) scripts/scripts.js -->
+	<script src="scripts/app.js"></script>
+
+	<!-- util -->
+	<script src="scripts/util/vcudTranslator.js"></script>
+
+	<!-- sign -->
+	<script src="scripts/sign/vcrudSign.js"></script>
+	<script src="scripts/sign/vcrudSignDirective.js"></script>
+	<script src="scripts/sign/vcrudSignService.js"></script>
+
+	<!-- common components -->
+	<script src="scripts/common/vcrudBasicComponents.js"></script>
+	<!-- topNavBar -->
+	<script src="scripts/common/topNavBar/vcrudTopNavBar.js"></script>
+	<script src="scripts/common/topNavBar/vcrudTopNavBarDirective.js"></script>
+	<!-- topNavBar -->
+	<script src="scripts/common/input/vcrudValidatedInput.js"></script>
+	<script src="scripts/common/input/vcrudValidatedInputDirective.js"></script>
+
+	<!-- endbuild -->
 </body>
 </html>

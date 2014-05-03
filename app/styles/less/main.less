@@ -1,20 +1,22 @@
-  /*!
- *   AdminLTE v1.2
- *   Author: AlmsaeedStudio.com
- *   License: Open source - MIT
- *           Please visit http://opensource.org/licenses/MIT for more information
-!*/
-.vcrud {
-  .wrapper > .loginForm {
-	&:before {
-	  content: "";
-	  width: 1px;
-	  height: 100%;
-	  display: inline-block;
-	  vertical-align: middle;
-	}
+html{
+  height: 100%;
 
-	display: inline-block;
+  body {
+	height: 100%;
+
+	.vcrud {
+	  height: 100%;
+	}
+  }
+}
+
+.vertical-centered-container{
+  height: 100%;
+  display: table;
+  vertical-align: middle;
+
+  .vertical-center-this{
+	display: table-cell;
 	vertical-align: middle;
   }
 }

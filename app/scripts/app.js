@@ -16,19 +16,15 @@ angular.module('vcrudGuiTemplateApp', [
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'vcrudSignLoginCtrl'
+        controller: 'loginFormCtrl'
       })
       .when('/login', {
-        templateUrl: 'views/signup/login.html',
-        controller: 'vcrudSignLoginCtrl'
+        templateUrl: 'views/sign/login.html',
+        controller: 'loginFormCtrl'
       })
       .when('/register', {
-        templateUrl: 'views/signup/register.html',
-        controller: 'vcrudSignLoginCtrl'
-      })
-      .when('/blank', {
-        templateUrl: 'views/blank.html',
-        controller: 'vcrudSignLoginCtrl'
+        templateUrl: 'views/sign/register.html',
+        controller: 'registerFormCtrl'
       })
       .otherwise({
         redirectTo: '/'
