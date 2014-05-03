@@ -1,36 +1,30 @@
 'use strict';
 
 angular.module('vcrudValidatedInputDirective', [])
-  .directive('validatedInput',['$tooltip', function($tooltip) {
+  .directive('validatedInput', function() {
     return {
-      restrict: 'E',
+      restrict: 'A',
       scope:{
-        feedbackType: '=',
+        feedbackType: '@',
         label:'@',
-        model:'='
+        formValidation:'@',
+        formControl:'='
       },
-      templateUrl: 'views/component/common/validatedInput.tpl.html',
       link: function(scope, element, attrs){
-        var inputElement = element.find('.form-control');
-        var formGroup = element.find('.form-group');
-        var formLabel = element.find('.control-label');
-        var formControlFeedback = element.find('.form-control-feedback');
+        var inputElement = element;
 
-        inputElement.attr('name',attrs.name);
-        inputElement.attr('required',attrs.required);
-        inputElement.attr('ng-required',attrs.ngRequired);
-        //inputElement.attr('ng-minlength',attrs.ngMinlength);
-        inputElement.attr('ng-maxlength',attrs.ngMaxlength);
-        inputElement.attr('ng-pattern',attrs.ngPattern);
-        inputElement.attr('ng-change',attrs.ngChange);
+        inputElement.wrap('<div class="form-group"></div>');
+        var formGroup = inputElement.parent();
 
-        inputElement.attr('type',attrs.type);
-        inputElement.attr('id',attrs.id);
-        inputElement.attr('name',attrs.id);
-        inputElement.attr('placeholder',attrs.placeholder);
 
+        inputElement.before('<label class="control-label"></label>');
+        var formLabel = inputElement.prev();
         formLabel.attr('for',attrs.id);
         formLabel.html(scope.label);
+
+
+        inputElement.after('<span class="glyphicon form-control-feedback"></span>');
+        var formControlFeedback = inputElement.next();
 
         function calculateFeedback(feedbackType){
           function removeAllFeedbackClasses(){
@@ -63,11 +57,22 @@ angular.module('vcrudValidatedInputDirective', [])
 
         //$compile(inputElement);
 
-        scope.$watch('feedbackType', function(newValue,oldValue) {
-          console.log(newValue);
-          calculateFeedback(newValue);
-        }, true);
+        //$compile(formGroup)(scope);
+        //$compile(formLabel)(scope);
+
+        // when model change, update our view (just update the div content)
+        calculateFeedback(scope.feedbackType);
+
+        scope.internalControl = scope.formControl || {};
+        scope.$on('validateFormEvent', function(event, msg) {
+          if(scope.formValidation==='true'){
+            calculateFeedback('SUCCESS');
+          } else{
+            calculateFeedback('ERROR');
+          }
+        });
+
 
       }
     };
-  }]);
+  });
